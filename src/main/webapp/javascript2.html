@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- javascript코드 입력 -->
+</head>
+<body>
+<button onclick="on();">크기</button>
+<img src="img/bulboff.gif" alt="전구" id="bulb"/>
+<button onclick="off();">끄기</button>
+
+<button onclick="toggle();" >토글</button>
+<!--j avascript코드 입력  -->
+<script>
+function toggle(){
+	if(document.getElementById("bulb").src == "http://localhost:8080/js/img/bulbon.gif"){
+		off();		
+	}else{
+		on();
+	}
+}
+
+function on(){
+	//var img = document.images[0].src;
+	document.getElementById("bulb").src = "img/bulbon.gif";
+	console.log("on");
+}
+
+function off(){
+	document.getElementById("bulb").src = "img/bulboff.gif";
+	console.log("off");
+}
+</script>
+</body>
+</html>
